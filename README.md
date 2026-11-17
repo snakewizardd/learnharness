@@ -16,6 +16,18 @@
   <a href="https://discord.gg/5tCHHQEB2e">Discord</a>
 </p>
 
+> [!TIP]
+> **Google Antigravity CLI (`agy`) Bridge (`snakewizardd` mod)**
+>
+> This fork is a minimal, zero-dependency addition on top of [amosblomqvist/learnharness](https://github.com/amosblomqvist/learnharness) that lets **Google AI / Antigravity subscribers** power LearnHarness directly through an installed **`agy` CLI**—no separate API keys required, and zero modifications to LearnHarness's core runtime.
+>
+> ```bash
+> npm ci && npm run plugins:setup
+> npm run dev:agy   # starts the local agy /v1 bridge (:11435) + LearnHarness (:3000)
+> ```
+>
+> Then in `http://localhost:3000`, open **Settings → Providers → + Add a provider → Custom endpoint**, set Base URL to `http://127.0.0.1:11435/v1` (**Keyless**), click **Connect**, and select `agy-default` for **Strong**, **Cheap**, and **Vision**. Full details & model overrides: **[docs/agy-cli.md](docs/agy-cli.md)**.
+
 LearnHarness uses AI agents to plan and teach lessons from your current understanding to your goal. It builds a detailed picture of what you understand and how you reason. That picture is updated as you learn.
 
 Instead of just giving you an explanation, it uses your answers and thinking to decide what you need next. Teaching builds understanding one reasoning step at a time. Practice makes it usable. A persistent knowledge graph carries it across sessions.
